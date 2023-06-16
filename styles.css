@@ -9,8 +9,8 @@ body {
 }
 
 header {
-  background-color: #333;
-  color: #fff;
+  background-color: #E8DA06;
+  color: #000000;
   padding: 20px;
   text-align: center;
 }
@@ -40,7 +40,7 @@ main {
 
 hr {
   border: none;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #000000;
   margin: 10px 0;
 }
 
@@ -55,8 +55,8 @@ li {
 }
 
 button {
-  background-color: #333;
-  color: #fff;
+  background-color: #E8DA06;
+  color: #000000;
   border: none;
   padding: 8px 12px;
   cursor: pointer;
@@ -77,3 +77,10 @@ button {
 .desplegado.show {
   display: block;
 }
+
+    body {
+        background-image: url('istockphoto-1061340340-170667a.jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
