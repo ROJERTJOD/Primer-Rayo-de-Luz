@@ -1,79 +1,95 @@
+/* styles.css */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background-color: #f3f3f3;
   margin: 0;
   padding: 0;
-}
-
-.text {
-  padding-top: 20px;
+  overflow-x: hidden; /* Evita desbordamiento horizontal */
 }
 
 header {
-  background-color: #333;
+  background: linear-gradient(45deg, #555, #777);
   color: #fff;
   padding: 20px;
   text-align: center;
+  border-bottom: 4px solid #bbb;
 }
 
-header h1 {
-  margin: 0;
-  font-size: 28px;
-}
-
-main {
-  margin: 20px;
-}
-
-.contenido {
-  margin-bottom: 30px;
-}
-
-.contenido h2 {
-  font-size: 24px;
-  margin: 0;
-}
-
-.contenido h3 {
-  font-size: 18px;
-  margin: 0 0 10px;
-}
-
-hr {
+button {
+  background-color: #bbb;
+  color: black; /* Color de texto negro */
+  font-weight: bold;
   border: none;
-  border-top: 1px solid #ccc;
-  margin: 10px 0;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  display: inline-block;
+  width: 100%;
+  text-align: left;
+  box-sizing: border-box; /* Asegura que el padding no afecte el ancho */
+}
+
+button:hover {
+  background-color: #aaa;
+  transform: scale(1.02);
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 li {
   margin-bottom: 10px;
 }
 
-button {
-  background-color: #333;
-  color: #fff;
-  border: none;
-  padding: 8px 12px;
-  cursor: pointer;
-}
-
 .desplegado {
   display: none;
+  background-color: #f3f3f3; /* Fondo gris claro */
+  border-left: 4px solid #ccc;
+  padding: 10px; /* Ajustado para hacer el texto más compacto */
+  border-radius: 0 5px 5px 0;
+  margin-top: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.5s;
+  overflow-wrap: break-word; /* Evita que textos largos desborden */
+  word-wrap: break-word;
+  line-height: 1.4; /* Compacta aún más el espaciado entre líneas */
+  font-size: 14px; /* Texto más pequeño */
+  color: #333; /* Texto más oscuro para mejor contraste */
 }
 
-.desplegado{
-  margin: 0;
-  padding: 10px;
-  background-color: #f5f5f5;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.desplegado p {
+  font-weight: 500; /* Hace el texto un poco más grueso */
+  margin: 20px 0; /* Aumenta la separación entre los párrafos */
 }
 
 .desplegado.show {
   display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Asegura que el contenedor principal no se desborde */
+main {
+  max-width: 100%; /* Evita el desbordamiento horizontal */
+  margin: 0 auto;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.desplegado img, .desplegado iframe {
+  max-width: 100%; /* Ajusta imágenes o iframes al tamaño del contenedor */
+  height: auto;
 }
